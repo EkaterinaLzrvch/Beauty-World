@@ -7,8 +7,6 @@ body {
     font-size: 14px;
 }
 
-
-
 /* ПРИЖАТЬ ФУТЕР */
 html,
 body {
@@ -57,6 +55,7 @@ a {
     position: relative;
     z-index: 3;
 }
+
 .header__logo {
     font-weight: 700;
     font-size: 24px;
@@ -139,7 +138,6 @@ a {
     position: absolute;
     bottom: 0; 
     right: 93px; 
-
 }
 
 .header__photo::before {
@@ -195,6 +193,12 @@ section {
 }
 
 .section__subtitle {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.about__item .section__subtitle {
     font-size: 16px;
 }
 
@@ -281,12 +285,6 @@ section {
 
 .about__item h3 {
     padding-bottom: 12px;
-}
-
-.section__subtitle {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
 }
 
 .section__text {
