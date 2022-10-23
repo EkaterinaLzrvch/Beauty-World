@@ -335,12 +335,13 @@ section {
 }
 
 .service-item {
-    max-width: 340px;
+    max-width: 350px;
+    width: 31%;
 
     &__img {
     border-radius: 8px;
-    width: 350px;
-    height: 180px;
+    width: 100%;
+    height: auto;
     }
 
     &__text {
@@ -366,8 +367,30 @@ section {
     line-height: 17px;
     
     &__item {
+        position: relative;
+        display: inline-block;
         & a:hover {
             color: #00BF78;
+        }
+
+        & a::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        
+        visibility: hidden;
+        background-color: #00BF78;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 0;
+        transition: opacity 0.1s linear;
+        }
+
+        & a:active::after {
+        opacity: 1;
+        visibility: visible;
         }
     }
 }
@@ -381,13 +404,14 @@ section {
     &__item {
     display: flex;
     justify-content: space-between;
-    width: 444px;   
+    width: 42%;   
     }
 
     &__number {
     font-size: 20px;
     line-height: 24px;
     color: #00BF78;
+    white-space: nowrap;
     }
 
     &__text {
@@ -483,7 +507,193 @@ section {
     }
 }
 
-/* ---------- SECTION FOOTER ---------- */
+/* ----------- SECTION PORTFOLIO ----------- */
+
+.portfolio {
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    
+    &__brands-text {
+        text-align: center;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        padding-top: 100px;
+    }
+
+    &__brands-list {
+        padding: 40px 0 50px;
+        margin: auto;
+    
+        max-width: 920px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        opacity: 0.5;
+    }
+}
+
+.button-left {
+    margin-right: 38px;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    column-gap: 30px; 
+    // - если так, то при ширине 1600+ не будет слишком большого расстояния, как было бы при justify-content: space-between
+
+    max-width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    left: 50%;
+    right: 50%;
+
+    &__img {
+    object-fit: cover;
+    width: 338px;
+    height: auto;
+    position: relative;
+    }
+
+    &__item {
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+            transform: scale(1.1);
+            transition: 0.5s;
+            
+            &::before {
+                content: url(../image/zoom.svg);
+                position: absolute;
+                top: 40%;
+                left: 45%;
+                z-index: 2;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            &::after {
+                 content: 'Увеличить';
+                position: absolute;
+                top: 55%;
+                left: 40%;
+                font-size: 14px;
+                line-height: 17px;
+                color: #FFF;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+
+/* ---------- REGISTRATION FORM  ---------- */
+
+.contact-us .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-us {
+    background-color: #F8F6F7;
+}
+
+.contacts {
+    max-width: 362px;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        padding-top: 32px;
+    }
+
+    &__socials {
+    display: flex;
+    max-width: 147px;
+    justify-content: space-between;
+    padding: 12px 0;
+    }
+}
+
+.phone {
+    padding: 20px 0;
+}
+
+.email {
+    color: #278AFF;
+    padding-bottom: 32px;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.socials-text {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 440px;
+    padding: 40px;
+    margin-right: 95px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+
+    &__personal-data {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 15px;
+        padding-top: 16px;
+    }
+
+    &__text {
+        padding: 15px 0 35px;
+    }
+    
+    &__btn {
+        font-style: 14px;
+        padding: 17px 0;
+        text-align: center;
+        color: #FFFFFF;
+        border-radius: 24px;
+    }
+}
+   
+form input {
+    padding: 15px;
+    border:1px solid #D8D8D8;
+    border-radius: 5px;
+
+    color: #A0A0A0;
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 20px;
+}
+
+.data-link {
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration: underline;
+    color: #278AFF;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* ----------  FOOTER ---------- */
 
 .footer {
     padding: 20px 0;
@@ -500,7 +710,6 @@ section {
     font-size: 12px;
     line-height: 15px;
     }
-
 }
 
 .privacy {
