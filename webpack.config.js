@@ -2,7 +2,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
   mode: process.env.NODE_ENV,
-  devtool:'hidden-source-map',
+  devtool:'hidden-source-map', // заменить в main! 
   module: {
     rules: [
       {
