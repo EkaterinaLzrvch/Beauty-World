@@ -1,5 +1,5 @@
 import 'slick-carousel/slick/slick';
-import $ from 'jquery';
+import $ from "jquery";
 import { Fancybox } from "@fancyapps/ui";
 
 function carousel() {
