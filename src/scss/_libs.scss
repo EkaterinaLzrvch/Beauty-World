@@ -1,2 +1,5 @@
-@use 'bootstrap/dist/css/bootstrap-grid.min.css';
-@use 'normalize.css/normalize.css';
+@use '../../node_modules/bootstrap/dist/css/bootstrap-grid.min.css';
+@use '../../node_modules/normalize.css/normalize.css';
+@use '../../node_modules/slick-carousel/slick/slick-theme.css';
+@use '../../node_modules/slick-carousel/slick/slick.css';
+@use "../../node_modules/@fancyapps/ui/dist/fancybox.css";
