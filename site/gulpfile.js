@@ -62,7 +62,7 @@ function serve() {
 }
 
 function copy() {
-  return src(['src/img/**/*.*', 'src/css/**/*.css'], {
+  return src(['src/image/**/*.*', 'src/css/**/*.css'], {
     base: 'src/',
   }).pipe(dest('dist'));
 }
