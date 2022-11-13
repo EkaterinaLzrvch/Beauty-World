@@ -28,7 +28,12 @@ export function AuthForm(props:AuthFormProprs) {
         event.preventDefault();
         props.onLogin({userName, password});
 
-        form.current.reset();
+        reset();
+    };
+
+    const reset = () => {
+        setUserName('');
+        setPassword('');
     };
 
     const onFinish = (values: any) => {
@@ -38,8 +43,10 @@ export function AuthForm(props:AuthFormProprs) {
         console.log('Failed:', errorInfo);
     };
     return (
-        <div>
-            <Form ref={form}
+        < >
+            <Form  onSubmitCapture={handleSubmit}
+
+            ref={form}
                 style={{ marginTop: 30 }}
                 name="basic"
                 labelCol={{
@@ -81,12 +88,12 @@ export function AuthForm(props:AuthFormProprs) {
                 </Form.Item>
 
                 <Form.Item wrapperCol={{ offset: 9, span: 5 }}>
-                    <Button type="primary" htmlType="submit"  onSubmit={handleSubmit}>
+                    <Button type="primary" htmlType="submit" onSubmit={handleSubmit}>
                         Submit
                     </Button>
                 </Form.Item>
             </Form>
-        </div>
+        </>
     )
 }
 

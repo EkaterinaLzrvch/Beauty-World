@@ -1,5 +1,14 @@
 @import '~antd/dist/antd.css';
 
+.page-header {
+  display: flex;
+  
+  justify-content: space-between;
+}
+
+.logout-button {
+  margin-top: 15px;
+}
 
 .site-layout-content {
   height: 100vh;
@@ -22,9 +31,24 @@
   object-fit: cover;
 }
 
-
 .site-card-wrapper {
   padding: 20px;
   width: 25%;
   background: #ececec;
+}
+
+.site-layout-content {
+  min-height: 280px;
+  background: #ececec;
+}
+#components-layout-demo-top .logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+.ant-row-rtl #components-layout-demo-top .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
 }
