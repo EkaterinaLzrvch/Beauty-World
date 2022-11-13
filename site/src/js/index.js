@@ -139,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
 //     });
 // };
 
-
 // РАБОТАЛО ИЗ КРАТКОЙ ФОРМЫ
 
 // document.querySelector('.form').addEventListener('submit', submitForm);
@@ -171,8 +170,6 @@ document.addEventListener("DOMContentLoaded", () => {
 //     });
 // };
 
-
-
 // То, что работало!
 
 // ДАННЫЕ ИЗ ПОЛНОЙ ФОРМЫ
@@ -203,8 +200,6 @@ document.addEventListener("DOMContentLoaded", () => {
 //   //   visitDate: data.visitDate
 //   // }
 // };
-
-
 
 // function checkValidity(event) {
 //   const fullForm = event.target.form;
@@ -241,5 +236,3 @@ document.addEventListener("DOMContentLoaded", () => {
 // fullForm.addEventListener('input', checkValidity);// Как заблокировать кнопку, если форма не валидна? Вот так не работает.
 // document.querySelector('.form').addEventListener('input', checkValidity);
 // fullForm.addEventListener('submit', handleFormSubmit); // Непонятно, почему форма не отправляется и выдает ошибку "необходимо заполнить имя клиента". Задали вопрос преподавателю, на момент сдачи д/з не ответил.
-
-// добавить лоадер!!!!!!!!!!!!! + маску ввода (она слетела)
