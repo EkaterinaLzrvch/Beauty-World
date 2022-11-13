@@ -1,7 +1,7 @@
+// MOBILE MENU
 const mobileMenuBtn = document.querySelector('#mobile-menu-btn');
 const mobileMenu = document.querySelector('.header__nav');
 
-// Mobile Menu
 mobileMenuBtn.addEventListener('click', function () {
   this.classList.toggle('active');
   mobileMenu.classList.toggle('mobile-open');
@@ -46,3 +46,52 @@ priceListBtn.forEach(function (item) {
 });
 
 document.querySelector('.service-list__tab').click();
+
+// МАСКА ВВОДА И ВАЛИДАЦИЯ ФОРМЫ 
+jQuery(function ($) {
+  $(".client-phone").mask("+7 (999) 999-99-99");
+});
+
+$(function () {
+  $("#full-form").validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 5
+      },
+      phone: {
+        required: true,
+      }
+    },
+    messages: {
+      name: {
+        required: "Поле обязательно к заполнению"
+      },
+      phone: {
+        required: "Поле обязательно к заполнению"
+      }
+    }
+  });
+});
+
+$(function () {
+  $("#form").validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 5
+      },
+      phone: {
+        required: true,
+      }
+    },
+    messages: {
+      name: {
+        required: "Поле обязательно к заполнению"
+      },
+      phone: {
+        required: "Поле обязательно к заполнению"
+      }
+    }
+  });
+});

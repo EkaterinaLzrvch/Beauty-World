@@ -42,7 +42,9 @@
     "@types/slick-carousel": "^1.6.37",
     "bootstrap": "^5.2.2",
     "del": "^6.1.1",
+    "inputmask": "^5.0.8-beta.47",
     "jquery": "^3.6.1",
+    "jquery-validation": "^1.19.5",
     "node-fetch": "^2.6.1",
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1"
